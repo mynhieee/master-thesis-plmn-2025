@@ -1,0 +1,328 @@
+-/                                                                                                /                                                                                                -                                                                                                   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+  1.724   3.102   3.386   3.401   3.716   4.976       2 
+[1] 2
+[1] 0
+  Variable         Mean             SD      Min            Max
+1       y1  4440.922547   5826.7267496 0.000000   94586.000000
+2       y2 66649.825862 110896.8229927 0.000000 1113300.000000
+3     y1lg     3.400919      0.4762375 1.724276       4.975827
+4     y2lg     4.413495      0.6691273 2.117271       6.046612
+===== PANEL ECONOMETRICS RESULTS =====
+
+
+====================
+ONE-WAY MODELS
+====================
+
+===== FE MODEL: y1lg =====
+Oneway (individual) effect Within Model
+
+Call:
+plm(formula = y1lg ~ R1 + R1:R2 + R1:R3 + D3 + lag(D4, 1) + S1 + 
+    Control_NoSub + Control_LifeTime + Control_Protest, data = pdata, 
+    model = "within")
+
+Unbalanced Panel: n = 83, T = 13-14, N = 1159
+
+Residuals:
+      Min.    1st Qu.     Median    3rd Qu.       Max. 
+-1.9614308 -0.0576210  0.0049077  0.0636485  1.3381217 
+
+Coefficients:
+                  Estimate Std. Error t-value  Pr(>|t|)    
+R1               -0.201904   0.094665 -2.1328 0.0331680 *  
+D3               -1.450563   0.186225 -7.7893 1.590e-14 ***
+lag(D4, 1)       -0.029635   0.015237 -1.9449 0.0520494 .  
+S1                0.033135   0.031869  1.0397 0.2986979    
+Control_NoSub     0.107944   0.029282  3.6863 0.0002390 ***
+Control_LifeTime  0.983984   0.142351  6.9124 8.187e-12 ***
+Control_Protest  -0.127443   0.034734 -3.6691 0.0002554 ***
+R1:R2             0.271598   0.095330  2.8490 0.0044694 ** 
+R1:R3             0.258087   0.099693  2.5888 0.0097620 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Total Sum of Squares:    36.748
+Residual Sum of Squares: 32.171
+R-Squared:      0.12454
+Adj. R-Squared: 0.049873
+F-statistic: 16.865 on 9 and 1067 DF, p-value: < 2.22e-16
+
+===== RE MODEL: y1lg =====
+Oneway (individual) effect Random Effect Model 
+   (Swamy-Arora's transformation)
+
+Call:
+plm(formula = y1lg ~ R1 + R1:R2 + R1:R3 + D3 + lag(D4, 1) + S1 + 
+    Control_NoSub + Control_LifeTime + Control_Protest, data = pdata, 
+    model = "random")
+
+Unbalanced Panel: n = 83, T = 13-14, N = 1159
+
+Effects:
+                  var std.dev share
+idiosyncratic 0.03015 0.17364 0.142
+individual    0.18182 0.42640 0.858
+theta:
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 0.8878  0.8918  0.8918  0.8917  0.8918  0.8918 
+
+Residuals:
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+-1.92550 -0.06984  0.00257 -0.00001  0.07120  1.40877 
+
+Coefficients:
+                  Estimate Std. Error z-value  Pr(>|z|)    
+(Intercept)       4.138550   0.368168 11.2409 < 2.2e-16 ***
+R1               -0.205244   0.095126 -2.1576 0.0309593 *  
+D3               -1.220738   0.182093 -6.7039 2.029e-11 ***
+lag(D4, 1)       -0.029752   0.015430 -1.9282 0.0538294 .  
+S1                0.033883   0.032239  1.0510 0.2932524    
+Control_NoSub     0.149714   0.027537  5.4369 5.422e-08 ***
+Control_LifeTime  0.461598   0.112712  4.0954 4.215e-05 ***
+Control_Protest  -0.121933   0.035145 -3.4695 0.0005215 ***
+R1:R2             0.267624   0.095777  2.7942 0.0052021 ** 
+R1:R3             0.262018   0.099787  2.6258 0.0086451 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Total Sum of Squares:    39.423
+Residual Sum of Squares: 35.53
+R-Squared:      0.098755
+Adj. R-Squared: 0.091696
+Chisq: 125.043 on 9 DF, p-value: < 2.22e-16
+
+===== HAUSMAN TEST (y1lg) =====
+
+	Hausman Test
+
+data:  y1lg ~ R1 + R1:R2 + R1:R3 + D3 + lag(D4, 1) + S1 + Control_NoSub +  ...
+chisq = 34.043, df = 9, p-value = 8.778e-05
+alternative hypothesis: one model is inconsistent
+
+
+===== FE MODEL: y2lg =====
+Oneway (individual) effect Within Model
+
+Call:
+plm(formula = y2lg ~ R1 + R1:R2 + R1:R3 + D3 + lag(D4, 1) + S1 + 
+    Control_NoSub + Control_LifeTime + Control_Protest, data = pdata, 
+    model = "within")
+
+Unbalanced Panel: n = 83, T = 13-14, N = 1158
+
+Residuals:
+      Min.    1st Qu.     Median    3rd Qu.       Max. 
+-1.2843353 -0.0939658  0.0053862  0.1121484  1.1124780 
+
+Coefficients:
+                  Estimate Std. Error t-value  Pr(>|t|)    
+R1               -0.379869   0.118029 -3.2184 0.0013278 ** 
+D3               -1.225608   0.232431 -5.2730 1.624e-07 ***
+lag(D4, 1)       -0.029341   0.019038 -1.5412 0.1235719    
+S1                0.010113   0.039749  0.2544 0.7992144    
+Control_NoSub     0.141064   0.036521  3.8626 0.0001190 ***
+Control_LifeTime  0.952950   0.177483  5.3693 9.701e-08 ***
+Control_Protest  -0.204194   0.043311 -4.7146 2.742e-06 ***
+R1:R2             0.432025   0.118851  3.6350 0.0002912 ***
+R1:R3             0.479338   0.124365  3.8543 0.0001230 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Total Sum of Squares:    56.246
+Residual Sum of Squares: 49.963
+R-Squared:      0.11172
+Adj. R-Squared: 0.035888
+F-statistic: 14.8965 on 9 and 1066 DF, p-value: < 2.22e-16
+
+===== RE MODEL: y2lg =====
+Oneway (individual) effect Random Effect Model 
+   (Swamy-Arora's transformation)
+
+Call:
+plm(formula = y2lg ~ R1 + R1:R2 + R1:R3 + D3 + lag(D4, 1) + S1 + 
+    Control_NoSub + Control_LifeTime + Control_Protest, data = pdata, 
+    model = "random")
+
+Unbalanced Panel: n = 83, T = 13-14, N = 1158
+
+Effects:
+                  var std.dev share
+idiosyncratic 0.04687 0.21649 0.107
+individual    0.39083 0.62516 0.893
+theta:
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+ 0.9044  0.9078  0.9078  0.9077  0.9078  0.9078 
+
+Residuals:
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+-1.2030 -0.1039  0.0142  0.0000  0.1204  1.2031 
+
+Coefficients:
+                  Estimate Std. Error z-value  Pr(>|z|)    
+(Intercept)       4.440505   0.459233  9.6694 < 2.2e-16 ***
+R1               -0.365968   0.118039 -3.1004 0.0019326 ** 
+D3               -1.057010   0.227332 -4.6496 3.325e-06 ***
+lag(D4, 1)       -0.029375   0.019146 -1.5342 0.1249745    
+S1                0.010492   0.039946  0.2626 0.7928267    
+Control_NoSub     0.170157   0.034738  4.8983 9.666e-07 ***
+Control_LifeTime  0.573308   0.147558  3.8853 0.0001022 ***
+Control_Protest  -0.200482   0.043531 -4.6056 4.114e-06 ***
+R1:R2             0.413859   0.118846  3.4823 0.0004971 ***
+R1:R3             0.461189   0.124001  3.7192 0.0001998 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Total Sum of Squares:    60.192
+Residual Sum of Squares: 54.428
+R-Squared:      0.095766
+Adj. R-Squared: 0.088677
+Chisq: 121.225 on 9 DF, p-value: < 2.22e-16
+
+===== HAUSMAN TEST (y2lg) =====
+
+	Hausman Test
+
+data:  y2lg ~ R1 + R1:R2 + R1:R3 + D3 + lag(D4, 1) + S1 + Control_NoSub +  ...
+chisq = 12.663, df = 9, p-value = 0.1785
+alternative hypothesis: one model is inconsistent
+
+
+===== POOLABILITY TEST =====
+
+	F statistic
+
+data:  y1lg ~ R1 + R1:R2 + R1:R3 + D3 + lag(D4, 1) + S1 + Control_NoSub +  ...
+F = 79.365, df1 = 82, df2 = 1067, p-value < 2.2e-16
+alternative hypothesis: unstability
+
+
+	F statistic
+
+data:  y2lg ~ R1 + R1:R2 + R1:R3 + D3 + lag(D4, 1) + S1 + Control_NoSub +  ...
+F = 111.6, df1 = 82, df2 = 1066, p-value < 2.2e-16
+alternative hypothesis: unstability
+
+
+===== TIME DUMMY TEST =====
+ [1] "factor(Time)2"  "factor(Time)3"  "factor(Time)4"  "factor(Time)5"  "factor(Time)6" 
+ [6] "factor(Time)7"  "factor(Time)8"  "factor(Time)9"  "factor(Time)10" "factor(Time)11"
+[11] "factor(Time)12"
+
+Linear hypothesis test:
+factor(Time)2 = 0
+factor(Time)3 = 0
+factor(Time)4 = 0
+factor(Time)5 = 0
+factor(Time)6 = 0
+factor(Time)7 = 0
+factor(Time)8 = 0
+factor(Time)9 = 0
+factor(Time)10 = 0
+factor(Time)11 = 0
+factor(Time)12 = 0
+
+Model 1: restricted model
+Model 2: y1lg ~ R1 + R1:R2 + R1:R3 + D3 + lag(D4, 1) + S1 + Control_NoSub + 
+    Control_LifeTime + Control_Protest + factor(Time)
+
+  Res.Df Df Chisq Pr(>Chisq)    
+1   1067                        
+2   1056 11 37.72  8.721e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+==============
+DIAGNOSTIC TESTS ONE-WAY
+===============
+
+===== Multicollinearity =====
+              R1               D3       lag(D4, 1)               S1    Control_NoSub 
+       37.287587         1.287989         1.001783         1.006490         1.386058 
+Control_LifeTime  Control_Protest            R1:R2            R1:R3 
+        1.426068         1.019876        33.749626        21.792411 
+              R1               D3       lag(D4, 1)               S1    Control_NoSub 
+       37.254256         1.290345         1.001814         1.006417         1.386146 
+Control_LifeTime  Control_Protest            R1:R2            R1:R3 
+        1.426333         1.019865        33.733296        21.788672 
+
+===== BREUSCH–PAGAN TEST Heteroskedasticity =====
+
+	studentized Breusch-Pagan test
+
+data:  fe_y1_oneway
+BP = 92.107, df = 9, p-value = 6.144e-16
+
+
+	studentized Breusch-Pagan test
+
+data:  re_y2_oneway
+BP = 63.712, df = 9, p-value = 2.567e-10
+
+
+===== WOOLDRIDGE TEST Serial correlation =====
+
+	Wooldridge's test for serial correlation in FE panels
+
+data:  fe_y1_oneway
+F = 36.667, df1 = 1, df2 = 1074, p-value = 1.935e-09
+alternative hypothesis: serial correlation
+
+
+	Wooldridge's test for serial correlation in FE panels
+
+data:  fe_y2_oneway
+F = 144.2, df1 = 1, df2 = 1073, p-value < 2.2e-16
+alternative hypothesis: serial correlation
+
+
+===== PESARAN CD TEST Cross-sectional dependence =====
+
+	Pesaran CD test for cross-sectional dependence in panels
+
+data:  y1lg ~ R1 + R1:R2 + R1:R3 + D3 + lag(D4, 1) + S1 + Control_NoSub +     Control_LifeTime + Control_Protest
+z = 15.974, p-value < 2.2e-16
+alternative hypothesis: cross-sectional dependence
+
+
+	Pesaran CD test for cross-sectional dependence in panels
+
+data:  y2lg ~ R1 + R1:R2 + R1:R3 + D3 + lag(D4, 1) + S1 + Control_NoSub +     Control_LifeTime + Control_Protest
+z = 14.285, p-value < 2.2e-16
+alternative hypothesis: cross-sectional dependence
+
+
+===== DRISCOLL-KRAAY =====
+
+t test of coefficients:
+
+                  Estimate Std. Error t value  Pr(>|t|)    
+R1               -0.201904   0.090245 -2.2373 0.0254731 *  
+D3               -1.450563   0.158629 -9.1444 < 2.2e-16 ***
+lag(D4, 1)       -0.029635   0.017148 -1.7281 0.0842529 .  
+S1                0.033135   0.020000  1.6568 0.0978578 .  
+Control_NoSub     0.107944   0.031299  3.4488 0.0005851 ***
+Control_LifeTime  0.983984   0.453485  2.1698 0.0302401 *  
+Control_Protest  -0.127443   0.032190 -3.9591 8.022e-05 ***
+R1:R2             0.271598   0.103028  2.6362 0.0085067 ** 
+R1:R3             0.258087   0.106742  2.4179 0.0157787 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+t test of coefficients:
+
+                  Estimate Std. Error t value  Pr(>|t|)    
+(Intercept)       4.440505   0.601605  7.3811 3.006e-13 ***
+R1               -0.365968   0.153793 -2.3796 0.0174929 *  
+D3               -1.057010   0.282626 -3.7400 0.0001931 ***
+lag(D4, 1)       -0.029375   0.021738 -1.3513 0.1768583    
+S1                0.010492   0.025468  0.4119 0.6804544    
+Control_NoSub     0.170157   0.060956  2.7915 0.0053336 ** 
+Control_LifeTime  0.573308   0.286038  2.0043 0.0452716 *  
+Control_Protest  -0.200482   0.040501 -4.9501 8.528e-07 ***
+R1:R2             0.413859   0.159175  2.6000 0.0094413 ** 
+R1:R3             0.461189   0.134273  3.4347 0.0006144 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
